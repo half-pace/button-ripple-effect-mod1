@@ -34,8 +34,8 @@ body {
     background-color: orangered;
     width: 0px;
     height: 0px;
-    left: 50%;
-    top: 50%;
+    left: var(--xPos); /* this is done since we cant access the elements of before and after pseudo class as they are not part of the DOM, that's why we use a var here to access it in our JS file */
+    top: var(--yPos);
     transform: translate(-50%, -50%);
     border-radius: 50%;
     transition: width .5s, height .5s;
